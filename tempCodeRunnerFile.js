@@ -1,0 +1,1 @@
+let cnd2 = ajay === vijay;
