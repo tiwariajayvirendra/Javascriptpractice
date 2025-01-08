@@ -185,13 +185,29 @@
 // }else{
 //     console.log(num,"Number is Not Modulo of 5")
 // }
-
+///////////////////////////////////////////////////////////////////////////////////////////////////
 // Q2.Write a code which can give grade to students According to score.According.
     // 90 to 100, A 
     // 70 to 89, B 
     // 50 to 69, C 
     // 35 to 49, F
 // Ans.
+let score = 43;
+let grade;
 
+console.log("Hello World");
+    if(score >= 90 && score <= 100){
+        grade="A";
+    }else if(score >= 70 && score <= 89){
+        grade="B";
+    }else if(score >= 60 && score<=69){
+        grade="C";
+    }else if(score >= 45 && score <=59){
+        grade="D";
+    }else if(score >=0 && score <= 44) {
+        grade="F";
+    };
+
+console.log("Hello Your Score is ",score, "And Your Grade is ", grade);
 
 
