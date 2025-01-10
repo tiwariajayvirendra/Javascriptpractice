@@ -1,0 +1,134 @@
+/* Reset all elements */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Base styles for the HTML and body */
+html, body {
+    font-style: italic;
+    background-color: #9FE2BF;
+    scroll-behavior: smooth; /* Enable smooth scrolling */
+}
+
+/* Main bar styles */
+.mainbar {
+    display: flex;
+    background-color: #dc7633 ;
+    height: 45px;
+    align-items: center; /* Ensure elements are vertically aligned */
+    justify-content: flex-start; /* Align items to the left */
+    position: fixed; /* Fix the navbar in place */
+    top: 0; /* Position it at the top of the page */
+    width: 100%; /* Ensure it spans the full width of the page */
+    z-index: 1000; /* Ensure it stays above other elements */
+}
+
+
+/* Other styles remain unchanged */
+
+
+/* Logo container styles */
+.logo {
+    display: flex;
+    background-color: #9FE2BF;
+    border-radius: 5px 4px 6px 4px;
+    justify-content: space-evenly; /* Space the logo items evenly */
+    margin-left: 30px; /* Add space on the left */
+    margin-right: 20px; /* Add space between the logo and navbar */
+}
+
+.logo a {
+    margin-right: 20px; /* Add space between logo items */
+    text-decoration: none; /* Remove underline */
+    color: black; /* Set the text color */
+    padding: 5px; /* Add padding for better hover effect */
+    transition: background-color 0.3s; /* Smooth transition */
+}
+
+.logo a:last-child {
+    margin-right: 0; /* Remove the margin from the last logo item */
+}
+
+/* Hover effect for logo */
+.logo a:hover {
+    background-color: gray; /* Change background color to gray on hover */
+}
+
+/* Navbar styles */
+.navbar {
+    display: flex;
+    background-color: #CCCCFF;
+    border-radius: 16px 4px 16px 4px;
+    justify-content: space-evenly;
+    margin-left: 60px; /* Add space on the left */
+     
+}
+
+.navbar a {
+    margin-right: 20px; /* Add space between navbar items */
+    text-decoration: none; /* Remove underline */
+    color: black; /* Set the text color */
+    padding: 5px; /* Add padding for better hover effect */
+    transition: background-color 0.3s; /* Smooth transition */
+}
+
+.navbar a:last-child {
+    margin-right: 0; /* Remove the margin from the last navbar item */
+}
+
+/* Hover effect for navbar */
+.navbar a:hover {
+    background-color: yellow; /* Change background color to Navyblue on hover */
+    border-radius: 10px 8px 10px 8px;
+}
+
+/* Search input container */
+.searchbox {
+    margin-left: auto; /* Push the search box to the far right */
+    
+}
+
+/* Search input styles */
+input[type="search"] {
+    margin-right: 16px; /* Add some margin if needed */
+    border-radius: 16px 8px 16px 8px ; /* Add border radius for rounded corners */
+    padding: 5px; /* Add padding for better appearance */
+    transition: background-color 0.3s, border-color 0.3s; /* Smooth transition for hover effect */
+}
+
+/* Search input hover effect */
+input[type="search"]:hover {
+    background-color: #f0e68c; /* Change background color on hover */
+    border-color:  #6495ED; /* Change border color on hover */
+}
+
+/* Section styles */
+.section-1, .section-2, .section-3, .section-4, .section-5 {
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap to the next line */
+    gap: 10px; /* Adjust the gap as needed */
+    padding: 10px; /* Optional: Add some padding */
+}
+
+.section-1 .box, .section-2 .box, .section-3 .box, .section-4 .box, .section-5 .box {
+    flex: 1 1 calc(50% - 20px); /* Flex grow and shrink, with a basis calculation */
+    background-color: #f0f0f0; /* Example background color */
+    padding: 20px; /* Adjust padding as needed */
+    text-align: center; /* Center content within the boxes */
+    transition: opacity 0.3s; /* Smooth transition for hover effect */
+    border: 2px solid #ccc; /* Add a border to each box */
+}
+
+.section-1 .box img, .section-2 .box img, .section-3 .box img, .section-4 .box img, .section-5 .box img {
+    width: 100%; /* Make images fit the box width */
+    height: auto; /* Maintain aspect ratio */
+    max-height: 400px; /* Adjust the max height as needed */
+    border-radius: 5px; /* Optional: Add rounded corners to images */
+}
+
+/* Fade-out hover effect */
+.section-1 .box:hover, .section-2 .box:hover, .section-3 .box:hover, .section-4 .box:hover, .section-5 .box:hover {
+    opacity: 0.6; /* Reduce opacity on hover */
+}
