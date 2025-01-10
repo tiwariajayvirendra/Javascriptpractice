@@ -49,9 +49,13 @@
 
 //  console.log("a = ", a); // 
 
+<<<<<<< HEAD
 // Comparison Operator 
 
 // Comparison Operator 
+=======
+ // Comparison Operator 
+>>>>>>> c995305d7d0dfc0124e1299f2e6b4d1dff074d87
 
 // console.log("a == b", a == b); // comparing 2 values like a  kya b ki taraha same hai 
 // console.log("a===b", a === b); //   strict version absalute equal 
@@ -186,6 +190,14 @@
 // }else{
 //     console.log(num,"Number is Not Modulo of 5")
 // }
+<<<<<<< HEAD
+=======
+ 
+
+=======
+///////////////////////////////////////////////////////////////////////////////////////////////////
+ 
+>>>>>>> c995305d7d0dfc0124e1299f2e6b4d1dff074d87
 // Q2.Write a code which can give grade to students According to score.According.
     // 90 to 100, A 
     // 70 to 89, B 
@@ -307,9 +319,7 @@
 // }
 // console.log("You Won the match");
 
-
-
-
+// Exe 1
 // let gameNum = 5;
 // let userName = prompt("You need to enter a correct number. Guess the number:");
 
@@ -354,6 +364,7 @@
 // };
 // console.log("Your Score is",score, "Your grade is",grade);
 
+<<<<<<< HEAD
 
 //  String Methods
 
@@ -361,3 +372,22 @@ let str="HelloWorld";
 console.log(str[7]); // Output is r
 
 
+=======
+let score = 43;
+let grade;
+
+console.log("Hello World");
+    if(score >= 90 && score <= 100){
+        grade="A";
+    }else if(score >= 70 && score <= 89){
+        grade="B";
+    }else if(score >= 60 && score<=69){
+        grade="C";
+    }else if(score >= 45 && score <=59){
+        grade="D";
+    }else if(score >=0 && score <= 44) {
+        grade="F";
+    };
+
+console.log("Hello Your Score is ",score, "And Your Grade is ", grade);
+>>>>>>> c995305d7d0dfc0124e1299f2e6b4d1dff074d87
