@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Profile Settings </title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        .custom-color-1 { background-color: #f1948a; }
+        .custom-color-2 { background-color: #f8c471; }
+        .custom-color-3 { background-color: #e6b0aa; }
+        .custom-color-4 { background-color: #229954; }
+    </style>
+</head>
+<body class="bg-gray-100">
+    <nav class="bg-white p-4 shadow-md">
+        <div class="flex justify-between items-center">
+            <div class="logo">
+                <a href="objct.html" class="text-xl font-bold text-gray-800"><i class="fas fa-user"></i> Home</a>
+                <a href="#" class="ml-4 text-gray-600"><i class="fas fa-link"></i> LINK</a>
+            </div>
+            <div class="navbar space-x-4">
+                <a href="#projects" class="text-gray-600 hover:text-gray-800">Home</a>
+                <a href="#section-2" class="text-gray-600 hover:text-gray-800">About</a>
+                <a href="#section-3" class="text-gray-600 hover:text-gray-800">Contacts</a>
+                <a href="#section-4" class="text-gray-600 hover:text-gray-800">Help</a>
+                <a href="#section-5" class="text-gray-600 hover:text-gray-800">Follow US!</a>
+            </div>
+            <div class="searchbox">
+                <input type="search" class="border rounded p-2" placeholder="Search here" id="searchInput">
+                <p id="displayText" class="text-gray-500"></p>
+            </div>
+        </div>
+    </nav>
+    <div class="sect p-4">
+        <section id="profile-picture" class="custom-color-1 p-6 rounded-lg shadow-md mb-4">
+            <h2 class="text-xl font-semibold mb-2">Profile Picture</h2>
+            <input type="file" accept="image/*" class="w-full p-2 border rounded" id="profilePicture">
+        </section>
+        <section id="bio" class="custom-color-2 p-6 rounded-lg shadow-md mb-4">
+            <h2 class="text-xl font-semibold mb-2">Bio</h2>
+            <textarea placeholder="Write a short biography about yourself" class="w-full p-2 border rounded" id="bio"></textarea>
+        </section>
+        <section id="skills" class="custom-color-3 p-6 rounded-lg shadow-md mb-4">
+            <h2 class="text-xl font-semibold mb-2">Skills</h2>
+            <input type="text" placeholder="Add your skills" class="w-full p-2 border rounded" id="skills">
+        </section>
+        <section id="experience" class="custom-color-4 p-6 rounded-lg shadow-md mb-4">
+            <h2 class="text-xl font-semibold mb-2">Experience</h2>
+            <textarea placeholder="Summarize your work or project experiences" class="w-full p-2 border rounded" id="experience"></textarea>
+        </section>
+        <section id="contact-info" class="custom-color-1 p-6 rounded-lg shadow-md mb-4">
+            <h2 class="text-xl font-semibold mb-2">Contact Information</h2>
+            <input type="email" placeholder="Email" class="w-full p-2 border rounded mb-2" id="email">
+            <input type="tel" placeholder="Phone Number" class="w-full p-2 border rounded mb-2" id="phoneNumber">
+            <input type="url" placeholder="LinkedIn" class="w-full p-2 border rounded" id="linkedin">
+        </section>
+        <section id="projects" class="custom-color-2 p-6 rounded-lg shadow-md mb-4">
+            <h2 class="text-xl font-semibold mb-2">Projects</h2>
+            <textarea placeholder="Highlight significant projects or your portfolio" class="w-full p-2 border rounded" id="projects"></textarea>
+        </section>
+        <div class="flex space-x-4">
+            <button onclick="createProfile()" class="bg-green-500 text-white px-4 py-2 rounded">Create</button>
+            <button onclick="updateProfile()" class="bg-blue-500 text-white px-4 py-2 rounded">Update</button>
+            <button onclick="deleteProfile()" class="bg-red-500 text-white px-4 py-2 rounded">Delete</button>
+            <button onclick="readProfile()" class="bg-yellow-500 text-white px-4 py-2 rounded">Read</button>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
+    <script>
+        const profile = {
+            picture: '',
+            bio: '',
+            skills: '',
+            experience: '',
+            email: '',
+            phoneNumber: '',
+            linkedin: '',
+            projects: ''
+        };
+
+        function createProfile() {
+            const fileInput = document.getElementById('profilePicture');
+            if (fileInput.files.length > 0) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    profile.picture = e.target.result;
+                };
+                reader.readAsDataURL(fileInput.files[0]);
+            }
+            profile.bio = document.getElementById('bio').value;
+            profile.skills = document.getElementById('skills').value;
+            profile.experience = document.getElementById('experience').value;
+            profile.email = document.getElementById('email').value;
+            profile.phoneNumber = document.getElementById('phoneNumber').value;
+            profile.linkedin = document.getElementById('linkedin').value;
+            profile.projects = document.getElementById('projects').value;
+            console.log('Profile Created:', profile);
+        }
+
+        function readProfile() {
+            console.log('Profile Read:', profile);
+            document.getElementById('profilePicture').value = '';
+            document.getElementById('bio').value = profile.bio;
+            document.getElementById('skills').value = profile.skills;
+            document.getElementById('experience').value = profile.experience;
+            document.getElementById('email').value = profile.email;
+            document.getElementById('phoneNumber').value = profile.phoneNumber;
+            document.getElementById('linkedin').value = profile.linkedin;
+            document.getElementById('projects').value = profile.projects;
+        }
+
+        function updateProfile() {
+            const fileInput = document.getElementById('profilePicture');
+            if (fileInput.files.length > 0) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    profile.picture = e.target.result;
+                };
+                reader.readAsDataURL(fileInput.files[0]);
+            }
+            profile.bio = document.getElementById('bio').value;
+            profile.skills = document.getElementById('skills').value;
+            profile.experience = document.getElementById('experience').value;
+            profile.email = document.getElementById('email').value;
+            profile.phoneNumber = document.getElementById('phoneNumber').value;
+            profile.linkedin = document.getElementById('linkedin').value;
+            profile.projects = document.getElementById('projects').value;
+            console.log('Profile Updated:', profile);
+        }
+
+        function deleteProfile() {
+            profile.picture = '';
+            profile.bio = '';
+            profile.skills = '';
+            profile.experience = '';
+            profile.email = '';
+            profile.phoneNumber = '';
+            profile.linkedin = '';
+            profile.projects = '';
+            console.log('Profile Deleted');
+            readProfile();
+        }
+    </script>
+</body>
+</html>
