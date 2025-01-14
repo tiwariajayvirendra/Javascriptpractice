@@ -384,6 +384,69 @@
 // console.log("Hello Your Score is ",score, "And Your Grade is ", grade);
 
 
+// let object1 = {
+//     name: "Ajay",
+//     surname: "Tiwari",
+//     address: "Lamatiya",
+//     pincode: 273413,
+//     age: 24
+// };
+
+// let object2 = {
+//     name: "Vijay",
+//     surname: "Tripathi",
+//     address: "America",
+//     pincode: 273443,
+//     age: 25
+// };
+
+// console.table([object1, object2]);
+
+
+
+// Template Literals
+
+
+// eg 1
+
+
+// let SuperString = `My name is aj styles  I am best in the world in coding` ;
+// console.log(SuperString);
+
+// let obj={
+//     nam: "ajay",
+//     age: 56
+// };
+
+// let output = `My name is ${obj.nam} and my age is ${obj.age} `;
+// console.log(output);
+
+// console.log("my name is ",obj.nam,"and my age is ", obj.age);
+
+
+// let output = `My and my age is ${1+4+21} `;
+// console.log(output);
+
+
+// console.log("Ajay\tTiwari");
+// console.log("Ajay\nTiwari") //expect(12)   but returns(11)
+ 
+// let name= "ajay\ntiwari";
+// console.log(name.length);  // length is 11 due to \n counts only 1 characters
+
+// String Methods - toUpperCase toLowerCase toTrim 
+let work="my name is ajay tiwari and i am best in the world";
+newwork= work.toUpperCase();
+console.log(work);
+console.log(newwork);
+
+work = work.toLowerCase() // it will work if same name if you taken for its object name 
+
+console.log(work);
+
+
+
+
 
 
 
